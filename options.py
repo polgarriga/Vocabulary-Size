@@ -1,6 +1,8 @@
 import streamlit as st
 import csv
 
+@st.cache
+
 foo = st.text_input("foo")
 bar = st.text_input("bar")
 baz = st.text_input("baz")

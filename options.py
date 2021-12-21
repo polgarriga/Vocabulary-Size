@@ -1,20 +1,12 @@
 import streamlit as st
-import pandas as pd
 import csv
 
-f = open('C:/Users/Pol/Documents/Database.csv', 'w')
+foo = st.text_input("foo")
+bar = st.text_input("bar")
+baz = st.text_input("baz")
 
-user_id = st.text_input("User ID")
-foo = st.slider("foo", 0, 100)
-bar = st.slider("bar", 0, 100)
+fields = [foo, bar, baz]
 
-writer = csv.writer(f)
-
-if st.button("Add row"):
-    
-    df = [{"UserID": user_id, "foo": foo, "bar": bar}]
-    df = pd.DataFrame(df)
-
-writer.writerow(df)
-
-f.close()
+with open('C:\\Users\\Pol\\Documents\\Database.csv','a', newline='') as f:
+    writer = csv.writer(f)
+    writer.writerow(fields)

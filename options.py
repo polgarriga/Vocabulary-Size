@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import csv
 
-f = open('C:\Users\Pol\Documents\Database.csv', 'w')
+f = open('C:/Users/Pol/Documents/Database.csv', 'w')
 
 @st.cache(allow_output_mutation=True)
 def get_data():

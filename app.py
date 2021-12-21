@@ -7,6 +7,7 @@ baz = st.text_input("baz")
 
 fields = [foo, bar, baz]
 
-with open('C:\\Users\\Pol\\Documents\\Database.csv','a', newline='') as f:
-    writer = csv.writer(f)
-    writer.writerow(fields)
+if st.button("Add row"):
+    with open('C:\\Users\\Pol\\Documents\\Database.csv','a', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow(fields)
